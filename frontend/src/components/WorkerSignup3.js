@@ -1,7 +1,7 @@
 import React from "react";
 import './styles/WorkerSignup.css';
 
-class WorkerSignUp extends React.Component{
+class WorkerSignUp3 extends React.Component{
 
     render(){
         return (
@@ -12,14 +12,14 @@ class WorkerSignUp extends React.Component{
                             <h1 >Sign Up</h1>
                         </div>
                         <div>
-                            <h3>First Name:</h3>
-                            <input type="text" placeholder="First Name" required />
-                            <h3>Last Names:</h3>
-                            <input type="text" placeholder="Last Name" required />
-                            <h3>Date of Birth:</h3>
-                            <input type="date" placeholder="First Name" required />
-                            <h3>Phone Number:</h3>
-                            <input type="number" placeholder="Phone Number" required />
+                            <h3>House no./Unit:</h3>
+                            <input type="text" placeholder="House no./Unit" required />
+                            <h3>Street:</h3>
+                            <input type="text" placeholder="Street" required />
+                            <h3>Sector/Area:</h3>
+                            <input type="text" placeholder="Sector/Area" required />
+                            <h3>City:</h3>
+                            <input type="text" placeholder="City" required />
                         </div>
                         <div className="right-text">
                             <button>Next</button>
@@ -34,4 +34,4 @@ class WorkerSignUp extends React.Component{
 
 }
 
-export default WorkerSignUp;
+export default WorkerSignUp3;
