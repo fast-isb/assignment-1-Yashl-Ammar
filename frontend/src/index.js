@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -13,6 +14,21 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <WorkerSignUp4 />
+=======
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals.js";
+import NavBar from "./components/NavBar.js";
+import WorkerSignUp from "./components/WorkerSignUp.js";
+import Login from "./components/Login.js";
+import NavBar2 from "./components/NavBarLogin&SignUp.js";
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <NavBar2 />
+    <Login />
+>>>>>>> bran
   </React.StrictMode>
 );
 
