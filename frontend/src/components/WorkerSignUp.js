@@ -1,5 +1,5 @@
 import React from "react";
-import "./WorkerSignUp.css"
+import "./WorkerSigYashlnUp.css"
 
 class WorkerSignUp extends React.Component{
 
@@ -9,7 +9,7 @@ class WorkerSignUp extends React.Component{
                 <div className="center">
                     <h3>First Name:</h3>
                     <input />
-                    <h3>Last Namesas:</h3>
+                    <h3>Last Names:</h3>
                     <input />
                     <h3>Date of Birth:</h3>
                     <input />
