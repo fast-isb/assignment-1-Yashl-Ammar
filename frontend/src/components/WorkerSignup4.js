@@ -12,12 +12,12 @@ class WorkerSignUp4 extends React.Component{
                             <h1 >Sign Up</h1>
                         </div>
                         <div>
-                            <h3>House no./Unit:</h3>
+                            <h3>Username:</h3>
                             <input type="text" placeholder="Username" required />
-                            <h3>Street:</h3>
-                            <input type="text" placeholder="Password" required />
-                            <h3>Sector/Area:</h3>
-                            <input type="text" placeholder="Confirm Password" required />
+                            <h3>Password:</h3>
+                            <input type="password" placeholder="Password" required />
+                            <h3>Confirm Password:</h3>
+                            <input type="password" placeholder="Confirm Password" required />
                         </div>
                         <div className="center-text">
                             <button>Sign up</button>

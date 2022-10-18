@@ -6,12 +6,13 @@ import reportWebVitals from './reportWebVitals.js';
 import WorkerSignUp from './components/WorkerSignUp.js';
 import WorkerSignUp2 from './components/WorkerSignup2.js';
 import WorkerSignUp3 from './components/WorkerSignup3.js';
+import WorkerSignUp4 from './components/WorkerSignup4.js';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <WorkerSignUp3 />
+    <WorkerSignUp4 />
   </React.StrictMode>
 );
 
