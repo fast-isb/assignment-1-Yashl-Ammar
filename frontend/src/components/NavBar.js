@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./NavBar.css";
+import "./styles/NavBar.css";
 import mahir from "./mahir.PNG";
 
 function NavBar() {

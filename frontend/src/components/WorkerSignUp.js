@@ -1,5 +1,5 @@
 import React from "react";
-import "./WorkerSigYashlnUp.css";
+import "./styles/WorkerSignup.css";
 
 class WorkerSignUp extends React.Component {
   render() {

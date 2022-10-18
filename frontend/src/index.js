@@ -1,14 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App.js';
-import reportWebVitals from './reportWebVitals.js';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals.js";
+import NavBar from "./components/NavBar.js";
+import WorkerSignUp from "./components/WorkerSignUp.js";
+import Login from "./components/Login.js";
+import NavBar2 from "./components/NavBarLogin&SignUp.js";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
-    
+    <NavBar2 />
+    <Login />
   </React.StrictMode>
 );
 
