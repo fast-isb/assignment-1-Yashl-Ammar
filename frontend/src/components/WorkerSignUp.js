@@ -59,14 +59,47 @@ class WorkerSignUp extends React.Component {
   updateConfirmPassword = (e) => {
     this.setState({confirmPassword : e.target.value});
   }
+  onSubmit = (e) => {
+    e.preventDefault();
+    // perform checks
+    if(this.state.password != this.state.confirmPassword  ){
+      alert("Password does not match");
+    }
+    else if (this.state.password.length < 4){
+      alert("Password must have atleast 4 characters");
+    }
+    else {
+      // create worker object
 
+      const worker = {
+        fName : this.state.fName,
+        lName : this.state.lName,
+        dob : this.state.dob,
+        pNumber : this.state.pNumber,
+        domain : this.state.domain,
+        services : this.state.services,
+        hNo : this.state.hNo,
+        street : this.state.street,
+        sector : this.state.sector,
+        city : this.state.city,
+        username : this.state.username,
+        password : this.state.password,
+      }
+
+      // send object to backend
+      console.log(worker);
+      
+
+      alert("Sign up was successful");
+    }
+  }
   
 
   render() {
     return (
       <div className="background-div">
         <div className="center-div">
-          <form>
+          <form onSubmit={this.onSubmit}>
             <div className="signup">
               <h1>Sign Up</h1>
             </div>
@@ -98,11 +131,8 @@ class WorkerSignUp extends React.Component {
                 <input type="password" placeholder="Password" required value={this.state.password} onChange={this.updatePassword} />
                 <h3>Confirm Password:</h3>
                 <input type="password" placeholder="Confirm Password" required value={this.state.confirmPassword} onChange={this.updateConfirmPassword} />
+                <input className="submit-button " type="submit" />
               </div>
-            </div>
-            
-            <div className="center-text">
-              <input className="submit-button " type="submit" />
             </div>
           </form>
         </div>
