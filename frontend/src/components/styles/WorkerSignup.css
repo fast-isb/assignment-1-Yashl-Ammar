@@ -1,0 +1,47 @@
+
+
+.center-div{
+    padding: 1% 7% 1% 7%;
+    background: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(175, 163, 163);
+}
+
+.center-text {
+    text-align: center;
+}
+
+.signup {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.right-text {
+    text-align: right;
+}
+
+input {
+    padding: 10px 10px 10px 10px;
+    width: 250px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 7px 7px 7px 7px;
+    width: 100px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #19A463;
+    color: white;
+}
