@@ -1,16 +1,24 @@
 
+.background-div{
+    justify-content: center;
+    text-align: center;
+}
+
+.inner-center {
+    width: 40%;
+    margin: 0 auto;
+}
 
 .center-div{
+    width: 50%;
+    margin: 0 auto;
     padding: 1% 7% 1% 7%;
     background: #FFFFFF;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border: 2px;
     border-style: solid;
     border-radius: 2px;
     border-color: rgb(175, 163, 163);
+    text-align: left;
 }
 
 .center-text {
@@ -34,11 +42,13 @@ input {
     border-radius: 3px;
 }
 
-button {
+
+
+.submit-button {
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 7px 7px 7px 7px;
-    width: 100px;
+    width: 270px;
     border: 1px;
     border-style: solid;
     border-radius: 5px;
