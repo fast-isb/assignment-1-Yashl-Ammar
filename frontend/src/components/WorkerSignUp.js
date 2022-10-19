@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/WorkerSignup.css";
+import NavBar from "./NavBarLogin&SignUp.js";
 
 class WorkerSignUp extends React.Component {
   state = {
@@ -98,6 +99,7 @@ class WorkerSignUp extends React.Component {
   render() {
     return (
       <div className="background-div">
+        <NavBar />
         <div className="center-div">
           <form onSubmit={this.onSubmit}>
             <div className="signup">
