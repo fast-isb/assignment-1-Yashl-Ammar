@@ -1,8 +1,4 @@
 
-.background-div{
-    justify-content: center;
-    text-align: center;
-}
 
 .inner-center {
     width: 40%;
@@ -13,11 +9,9 @@
     width: 50%;
     margin: 0 auto;
     padding: 1% 7% 1% 7%;
-    background: #FFFFFF;
-    border: 2px;
-    border-style: solid;
+    background: #222222;
+    color: white;
     border-radius: 2px;
-    border-color: rgb(175, 163, 163);
     text-align: left;
 }
 
@@ -34,14 +28,13 @@
     text-align: right;
 }
 
-input {
+.signup-textfield {
     padding: 10px 10px 10px 10px;
     width: 250px;
     border: 1px;
     border-style: solid;
     border-radius: 3px;
 }
-
 
 
 .submit-button {
@@ -55,3 +48,12 @@ input {
     background-color: #19A463;
     color: white;
 }
+
+.submit-button:hover {
+    transition: 0.5s;
+    opacity: 0.7;
+}
+.submit-button:active {
+    background-color: grey;
+}
+
