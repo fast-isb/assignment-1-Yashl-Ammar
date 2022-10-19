@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals.js";
 import WorkerSignUp from "./components/WorkerSignUp.js";
-import AdminWorkerBan from './components/AdminWorkerBan.js'
+import AdminHomePage from "./components/AdminHomePage.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AdminWorkerBan />
+    <AdminHomePage />
   </React.StrictMode>
 );
 
