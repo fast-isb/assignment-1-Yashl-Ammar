@@ -28,7 +28,7 @@
     text-align: right;
 }
 
-input {
+.signup-textfield {
     padding: 10px 10px 10px 10px;
     width: 250px;
     border: 1px;
