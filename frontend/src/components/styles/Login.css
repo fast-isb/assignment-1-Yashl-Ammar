@@ -1,14 +1,20 @@
+.background{
+
+  background-image: url("https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-color: #cccccc;
+  background-size: cover;
+}
+
 .Login-form{
   padding: 1% 7% 1% 7%;
-  background: #FFFFFF;
+  background: #222222;
+  color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 2px;
-  border-style: solid;
   border-radius: 2px;
-  border-color: rgb(175, 163, 163);
 }
 .SignIn{
    text-align: center;
@@ -25,7 +31,7 @@ input {
   border-radius: 3px;
 }
 
-button {
+.Sign-In-Button{
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 7px 7px 7px 7px;
@@ -33,6 +39,14 @@ button {
   border: 1px;
   border-style: solid;
   border-radius: 5px;
-  background-color: #19A463;
+  background-color: #19a463;
   color: white;
+  
+}
+.Sign-In-Button:hover{
+  transition: 0.5s;
+  opacity: 0.7;
+}
+.Sign-In-Button:active{
+  background-color: grey;
 }

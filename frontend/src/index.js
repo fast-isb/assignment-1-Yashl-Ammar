@@ -3,11 +3,20 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals.js";
 import WorkerSignUp from "./components/WorkerSignUp.js";
-
+import Login from "./components/Login.js";
+import Home from "./components/Home.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <WorkerSignUp />
+    <Router>
+      <Routes>
+        <Route path="/" element={<NavBar />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<WorkerSignUp />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
