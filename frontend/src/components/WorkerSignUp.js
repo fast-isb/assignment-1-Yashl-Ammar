@@ -61,7 +61,7 @@ class WorkerSignUp extends React.Component {
   updateConfirmPassword = (e) => {
     this.setState({confirmPassword : e.target.value});
   }
-  onSubmit = (e) => {
+  onSubmit = async (e) =>  {
     e.preventDefault();
     // perform checks
     if(this.state.password !== this.state.confirmPassword  ){
@@ -74,8 +74,9 @@ class WorkerSignUp extends React.Component {
       // create worker object
 
       const worker = {
-        fName : this.state.fName,
-        lName : this.state.lName,
+        username : this.state.username,
+        fname : this.state.fName,
+        lname : this.state.lName,
         dob : this.state.dob,
         pNumber : this.state.pNumber,
         domain : this.state.domain,
@@ -84,7 +85,6 @@ class WorkerSignUp extends React.Component {
         street : this.state.street,
         sector : this.state.sector,
         city : this.state.city,
-        username : this.state.username,
         password : this.state.password,
         banned : false,
       }
@@ -92,12 +92,20 @@ class WorkerSignUp extends React.Component {
       // send object to backend
       console.log(worker);
       
-      axios.post('http://localhost:3001/worker/add', worker)
-      .then(res => {
-        console.log(res.data);
-      })
+      try {
+        await axios.post('http://localhost:3001/worker/add', worker)
+        .then(res => {
+          console.log(res.data);
+        })
+  
+        alert("Sign up was successful");
+      }
+      catch (e) {
+        console.log(e.response);
 
-      alert("Sign up was successful");
+        alert('this worker already exists');
+      }
+      
     }
   }
   
