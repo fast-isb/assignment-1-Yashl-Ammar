@@ -17,6 +17,11 @@ class Login extends React.Component {
     e.preventDefault();
     console.log(this.state.username);
     console.log(this.state.password);
+    const users = {
+      username: this.state.username,
+      password: this.state.password,
+    };
+
     alert(
       "Login successfull" +
         "Your username is : " +
