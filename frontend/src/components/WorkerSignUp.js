@@ -64,7 +64,7 @@ class WorkerSignUp extends React.Component {
   onSubmit = (e) => {
     e.preventDefault();
     // perform checks
-    if(this.state.password != this.state.confirmPassword  ){
+    if(this.state.password !== this.state.confirmPassword  ){
       alert("Password does not match");
     }
     else if (this.state.password.length < 4){

@@ -47,16 +47,18 @@
 
 .mahir-title{
     font-size: 50px;
+    color: #19A463;
 }
 
 .mahir-hr {
     margin-top: -5px;
     width: 200px;
     height: 5px;
-    background-color: #222222;
+    background-color: #19A463;
 }
 
 .about-section {
+    margin-top: -10px;
     text-align: left;
     padding: 20px;
 }
