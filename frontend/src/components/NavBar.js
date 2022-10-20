@@ -21,7 +21,14 @@ function NavBar() {
     <div>
       <div className={`container-fluid ${show && "nav_black"}`}>
         <img className="navbar_mahir_logo" src={mahir} alt=""></img>
-        <button className="NavBar-SignUp-Button">Sign Up</button>
+        <button
+          className="NavBar-SignUp-Button"
+          onClick={() => {
+            navigate("/customer/signup");
+          }}
+        >
+          Sign Up
+        </button>
         <button
           className="NavBar-SignIn-Button"
           onClick={() => {

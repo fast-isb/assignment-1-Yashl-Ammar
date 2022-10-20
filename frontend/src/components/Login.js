@@ -3,6 +3,7 @@ import "./styles/Login.css";
 import NavBar from "./NavBarLogin&SignUp.js";
 import mahir from "./mahir.PNG";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 class Login extends React.Component {
   state = {
     username: "",
@@ -26,6 +27,9 @@ class Login extends React.Component {
       await axios
         .post("http://localhost:3001/worker/login", users)
         .then((res) => {
+          // if (res.data.password === password) {
+          //   Navigate("/workrer/profile");
+          // }
           console.log(res.data);
         });
 
