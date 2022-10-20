@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/WorkerSignup.css";
-import Navbar from "./NavBarLogin&SignUp.js";
+import NavBar from "./NavBarLogin&SignUp.js";
+import axios from "axios";
+
 class WorkerSignUp extends React.Component {
   state = {
     fName: "",
@@ -58,7 +60,7 @@ class WorkerSignUp extends React.Component {
   updateConfirmPassword = (e) => {
     this.setState({ confirmPassword: e.target.value });
   };
-  onSubmit = (e) => {
+  onSubmit = async (e) => {
     e.preventDefault();
     // perform checks
     if (this.state.password !== this.state.confirmPassword) {
@@ -69,8 +71,9 @@ class WorkerSignUp extends React.Component {
       // create worker object
 
       const worker = {
-        fName: this.state.fName,
-        lName: this.state.lName,
+        username: this.state.username,
+        fname: this.state.fName,
+        lname: this.state.lName,
         dob: this.state.dob,
         pNumber: this.state.pNumber,
         domain: this.state.domain,
@@ -79,21 +82,33 @@ class WorkerSignUp extends React.Component {
         street: this.state.street,
         sector: this.state.sector,
         city: this.state.city,
-        username: this.state.username,
         password: this.state.password,
+        banned: false,
       };
 
       // send object to backend
       console.log(worker);
 
-      alert("Sign up was successful");
+      try {
+        await axios
+          .post("http://localhost:3001/worker/add", worker)
+          .then((res) => {
+            console.log(res.data);
+          });
+
+        alert("Sign up was successful");
+      } catch (e) {
+        console.log(e.response);
+
+        alert("this worker already exists");
+      }
     }
   };
 
   render() {
     return (
       <div className="background-div">
-        <Navbar />
+        <NavBar />
         <div className="center-div">
           <form onSubmit={this.onSubmit}>
             <div className="signup">
@@ -103,6 +118,7 @@ class WorkerSignUp extends React.Component {
               <div>
                 <h3>First Name:</h3>
                 <input
+                  className="signup-textfield"
                   type="text"
                   placeholder="First Name"
                   required
@@ -111,6 +127,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Last Names:</h3>
                 <input
+                  className="signup-textfield"
                   type="text"
                   placeholder="Last Name"
                   required
@@ -119,6 +136,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Date of Birth:</h3>
                 <input
+                  className="signup-textfield"
                   type="date"
                   placeholder="Date"
                   required
@@ -127,6 +145,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Phone Number:</h3>
                 <input
+                  className="signup-textfield"
                   type="number"
                   placeholder="Phone Number"
                   required
@@ -135,6 +154,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Choose your domain:</h3>
                 <input
+                  className="signup-textfield"
                   type="text"
                   placeholder="Domain"
                   required
@@ -143,6 +163,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Services you will provide:</h3>
                 <input
+                  className="signup-textfield"
                   type="text"
                   placeholder="Services"
                   required
@@ -151,6 +172,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>House no./Unit:</h3>
                 <input
+                  className="signup-textfield"
                   type="text"
                   placeholder="House no./Unit"
                   required
@@ -159,6 +181,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Street:</h3>
                 <input
+                  className="signup-textfield"
                   type="text"
                   placeholder="Street"
                   required
@@ -167,6 +190,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Sector/Area:</h3>
                 <input
+                  className="signup-textfield"
                   type="text"
                   placeholder="Sector/Area"
                   required
@@ -175,6 +199,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>City:</h3>
                 <input
+                  className="signup-textfield"
                   type="text"
                   placeholder="City"
                   required
@@ -183,6 +208,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Username:</h3>
                 <input
+                  className="signup-textfield"
                   type="text"
                   placeholder="Username"
                   required
@@ -191,6 +217,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Password:</h3>
                 <input
+                  className="signup-textfield"
                   type="password"
                   placeholder="Password"
                   required
@@ -199,6 +226,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Confirm Password:</h3>
                 <input
+                  className="signup-textfield"
                   type="password"
                   placeholder="Confirm Password"
                   required

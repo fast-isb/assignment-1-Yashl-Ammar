@@ -2,6 +2,7 @@ import React from "react";
 import "./styles/Login.css";
 import NavBar from "./NavBarLogin&SignUp.js";
 import mahir from "./mahir.PNG";
+import axios from "axios";
 class Login extends React.Component {
   state = {
     username: "",
@@ -13,22 +14,27 @@ class Login extends React.Component {
   updatepassword = (e) => {
     this.setState({ password: e.target.value });
   };
-  onLogin = (e) => {
+  onLogin = async (e) => {
     e.preventDefault();
-    console.log(this.state.username);
-    console.log(this.state.password);
+
     const users = {
       username: this.state.username,
       password: this.state.password,
     };
+    console.log(users);
+    try {
+      await axios
+        .post("http://localhost:3001/worker/login", users)
+        .then((res) => {
+          console.log(res.data);
+        });
 
-    alert(
-      "Login successfull" +
-        "Your username is : " +
-        this.state.username +
-        " Your password is +" +
-        this.state.password
-    );
+      alert("Sign up was successful");
+    } catch (e) {
+      console.log(e.response);
+
+      alert("errror");
+    }
   };
   render() {
     return (

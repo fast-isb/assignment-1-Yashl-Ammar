@@ -14,10 +14,6 @@ router.get("/", (req, res) => {
   res.send(users);
 });
 
-app.post("/login", (req, res) => {
-  res.send("Hello Universe!");
-});
-
 router.post("/", (req, res) => {
   const user = req.body;
   console.log(req.body);
