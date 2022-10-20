@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import App from "./App.js";
 import reportWebVitals from "./reportWebVitals.js";
 import WorkerSignUp from "./components/WorkerSignUp.js";
-import AdminHomePage from "./components/AdminHomePage.js";
-import AdminSearchWorker from "./components/AdminSearchWorker.js";
+import WorkerSignUp2 from "./components/WorkerSignup2.js";
+import WorkerSignUp3 from "./components/WorkerSignup3.js";
+import WorkerSignUp4 from "./components/WorkerSignup4.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
