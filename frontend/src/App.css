@@ -36,11 +36,11 @@
     transform: rotate(360deg);
   }
 }
-.SignUpButton{
+.Customer-SignUpButton{
   color: black;
 }
 
-.SignUp{
+.Customer-SignUp{
   background-color: beige;
   min-height: 100vh;
   display: flex;
@@ -51,11 +51,11 @@
   color: black;
 }
 
-.submitButton{
+.User-submitButton{
   background-color: greenyellow;
 }
 
-.SignIn{
+.Admin-SignIn{
   background-color: beige;
   min-height: 100vh;
   display: flex;

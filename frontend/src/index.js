@@ -1,17 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App.js";
 import reportWebVitals from "./reportWebVitals.js";
 import WorkerSignUp from "./components/WorkerSignUp.js";
-import WorkerSignUp2 from "./components/WorkerSignup2.js";
-import WorkerSignUp3 from "./components/WorkerSignup3.js";
-import WorkerSignUp4 from "./components/WorkerSignup4.js";
-
+import Login from "./components/Login.js";
+import Home from "./components/Home.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CustomerSignUp from "./signup.js";
+// import SideBar from "./components/SideBar.js";
+import WorkersProfile from "./components/WorkersProfile.js";
+import NavBar from "./components/NavBar.js";
+import AdminSearchWorker from "./components/AdminSearchWorker.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AdminSearchWorker />
+    <Router>
+      <Routes>
+        <Route path="/" element={<AdminSearchWorker />} />
+        <Route path="/worker/pofile" element={<WorkerSignUp />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<WorkerSignUp />} />
+        <Route path="/customer/signup" element={<CustomerSignUp />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
