@@ -1,17 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App.js";
+import SignIn from "./signIn";
 import reportWebVitals from "./reportWebVitals.js";
-import WorkerSignUp from "./components/WorkerSignUp.js";
-import WorkerSignUp2 from "./components/WorkerSignup2.js";
-import WorkerSignUp3 from "./components/WorkerSignup3.js";
-import WorkerSignUp4 from "./components/WorkerSignup4.js";
+import SignUp from "./signup";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <WorkerSignUp4 />
+    {/* <WorkerSignUp4 /> */}
+    <SignUp/>
+    <SignIn/>
   </React.StrictMode>
 );
 
