@@ -44,4 +44,16 @@ workerRouter.post('/add',( req, res) => {
     })
 })
 
+workerRouter.post('/search',(req,res) => {
+    let name = req.body.name;
+
+    Worker.find({fname : name})
+    .then((worker)=> {
+        res.json(worker);
+    })
+    .catch((e) => {
+        res.json('Worker not found');
+    });
+})
+
 export default workerRouter;

@@ -11,7 +11,7 @@ import WorkerSignUp4 from "./components/WorkerSignup4.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <WorkerSignUp4 />
+    <AdminSearchWorker />
   </React.StrictMode>
 );
 
