@@ -1,9 +1,8 @@
-import { useLocation } from 'react-router-dom'
+import { useLocation , useNavigate} from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBar from './NavBarLogin&SignUp.js';
 import './styles/AdminViewWorker.css'
-
 
 const WorkerFeildViewTile = (props) => {
     return (
@@ -16,10 +15,24 @@ const WorkerFeildViewTile = (props) => {
 }
 
 const AdminViewWorker = () => {
+    let navigate = useNavigate();
     let location = useLocation();
     let username = {username : location.state.username};
 
-    const [worker , setWorker] = useState({});
+    const [worker , setWorker] = useState({username : '',
+        fname : '',
+        lname : '',
+        dob : '',
+        banned : '',
+        domain : '',
+        service : '',
+        pNo : '',
+        hNo : '',
+        street : '',
+        sector : '',
+        city : '',
+        password : ''
+    });
 
     useEffect( () => {
         let fetchData = async () => {
@@ -45,6 +58,41 @@ const AdminViewWorker = () => {
         return 'Not Banned'
     }
 
+    let deleteWorker = () => {
+        let requestObejct = {username : worker.username};
+
+        axios.post('http://localhost:3001/worker/delete', requestObejct)
+        .then(res => {
+            console.log(res.data)
+        })
+        .catch(err => {
+            console.log(err);
+        })
+
+        // needs to be updated
+        navigate('/');
+    }
+
+    let banWorker = () => {
+
+        let updatedBan = !worker.banned;
+        let requestObejct = {username : worker.username,banned : updatedBan};
+
+        console.log(updatedBan);
+
+        axios.post('http://localhost:3001/worker/ban', requestObejct)
+        .then(res => {
+            console.log(res.data)
+        })
+        .catch(err => {
+            console.log(err);
+        })
+
+        // needs to be updated
+        navigate('/');
+    }
+
+
     return ( 
         <div>
             <div>
@@ -53,8 +101,8 @@ const AdminViewWorker = () => {
             <div className='adminview-worker-data-display'>
                 <h1 className='adminview-worker-data-display-title'>{worker.fname} {worker.lname}</h1>
                 <hr className='adminview-worker-data-display-title-hr' />
-                <button className='adminview-worker-data-display-button'>  Delete </button>
-                <button className='adminview-worker-data-display-button'>  {checkBanned()} </button>
+                <button className='adminview-worker-data-display-button' onClick={deleteWorker}>  Delete </button>
+                <button className='adminview-worker-data-display-button' onClick={banWorker}>  {checkBanned()} </button>
                 
                 <div className='adminview-worker-data-display-table'>
                 <br />
