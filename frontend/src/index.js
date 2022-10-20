@@ -11,6 +11,7 @@ import CustomerSignUp from "./signup.js";
 import WorkersProfile from "./components/WorkersProfile.js";
 import NavBar from "./components/NavBar.js";
 import AdminSearchWorker from "./components/AdminSearchWorker.js";
+import AdminViewWorker from "./components/AdminViewWorker.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ root.render(
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<WorkerSignUp />} />
         <Route path="/customer/signup" element={<CustomerSignUp />} />
+        <Route path="/admin/viewworker" element={<AdminViewWorker />} />
       </Routes>
     </Router>
   </React.StrictMode>

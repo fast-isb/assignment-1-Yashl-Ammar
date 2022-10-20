@@ -56,6 +56,40 @@ workerRouter.post("/search", (req, res) => {
       });
   });
 
+workerRouter.post('/getworker', (req,res) => {
+
+    Worker.find({username : req.body.username})
+    .then(worker => {
+        res.json(worker);
+    })
+    .catch((err) => {
+        res.status(400).json("Error " + err);
+    })
+})
+
+workerRouter.post('/delete',(req,res)=> {
+
+    Worker.deleteOne({username : req.body.username})
+    .then(() => {
+        res.json('Worker Deleted');
+    })
+    .catch((err) => {
+        res.status(400).json("Error " + err);
+    })
+})
+
+workerRouter.post('/ban',  async (req,res)=> {
+
+    let filter = {username : req.body.username};
+    let update = {banned : req.body.banned};
+
+    console.log(req.body);
+
+    await Worker.updateOne(filter,update);
+
+    res.json('Ban Status Updated');
+})
+
 workerRouter.post("/login", (req, res) => {
   let username = req.body.username;
   let password = req.body.password;

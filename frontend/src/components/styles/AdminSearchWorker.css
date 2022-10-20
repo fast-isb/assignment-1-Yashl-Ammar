@@ -57,3 +57,8 @@
     border: 0px;
     width: 100px;
 }
+
+.admin-search-worker-view-link {
+    text-decoration: none;
+    color: white;
+}
