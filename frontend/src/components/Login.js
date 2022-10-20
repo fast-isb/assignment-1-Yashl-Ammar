@@ -27,9 +27,6 @@ class Login extends React.Component {
       await axios
         .post("http://localhost:3001/worker/login", users)
         .then((res) => {
-          // if (res.data.password === password) {
-          //   Navigate("/workrer/profile");
-          // }
           console.log(res.data);
         });
 
