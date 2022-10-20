@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './NavBarLogin&SignUp.js';
 import './styles/AdminSearchWorker.css';
+import axios from 'axios';
 
 class AdminSearchWorker extends React.Component {
     state = {
@@ -13,10 +14,14 @@ class AdminSearchWorker extends React.Component {
         });
     }
 
-    onSubmit = e => {
+    onSubmit = async e => {
         e.preventDefault();
 
+        const workerName = {
+            name : this.state.searchText,
+        }
 
+        axios.post('http://localhost:3001/worker/search', workerName).then(res => {console.log(res.data)});
     }
 
     render() { 

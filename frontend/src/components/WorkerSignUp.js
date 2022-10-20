@@ -95,7 +95,6 @@ class WorkerSignUp extends React.Component {
           .then((res) => {
             console.log(res.data);
           });
-
         alert("Sign up was successful");
       } catch (e) {
         console.log(e.response);
