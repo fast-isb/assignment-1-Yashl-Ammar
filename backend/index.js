@@ -6,10 +6,10 @@
 //const express = require('express')
 import express from 'express'; // <-- Module Style import
 import bodyParser from 'body-parser';
-import cors from 'cors';
 
 // Importing user route
 import router from './routes/users.js';
+import workerRouter from './routes/workers.js'
 // const router = require('router')
 
 // const bodyParser = require('body-parser')
@@ -18,9 +18,10 @@ const app = express()
 const port = 3001
 
 app.use(bodyParser.json())
-app.use(cors())
 // Adding a Router
 app.use('/users', router);
+
+app.use('/worker', workerRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello Universe!')
