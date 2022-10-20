@@ -10,12 +10,13 @@ import CustomerSignUp from "./signup.js";
 // import SideBar from "./components/SideBar.js";
 import WorkersProfile from "./components/WorkersProfile.js";
 import NavBar from "./components/NavBar.js";
+import AdminSearchWorker from "./components/AdminSearchWorker.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<NavBar />} />
+        <Route path="/" element={<AdminSearchWorker />} />
         <Route path="/worker/pofile" element={<WorkerSignUp />} />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<WorkerSignUp />} />

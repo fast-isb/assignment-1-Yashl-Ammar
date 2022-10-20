@@ -44,6 +44,18 @@ workerRouter.post("/add", (req, res) => {
       res.status(400).json("Error " + err);
     });
 });
+
+workerRouter.post("/search", (req, res) => {
+    let name = req.body.name;
+    Worker.find({ fname: name})
+      .then((worker) => {
+        res.json(worker);
+      })
+      .catch((err) => {
+        res.status(400).json("Error " + err);
+      });
+  });
+
 workerRouter.post("/login", (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
