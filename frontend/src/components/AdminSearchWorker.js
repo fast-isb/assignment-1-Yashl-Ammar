@@ -2,9 +2,10 @@ import React from 'react';
 import NavBar from './NavBarLogin&SignUp.js';
 import './styles/AdminSearchWorker.css';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 let WorkerTile = (props) => {
+
     let checkBanned = () => {
         if(props.worker.banned === false){
             return 'Not Banned';
@@ -19,7 +20,7 @@ let WorkerTile = (props) => {
             <td>{props.worker.dob.substring(0,10)}</td>
             <td>{props.worker.service}</td>
             <td>{checkBanned()}</td>
-            <td><button className='worker-search-result-view-button'  > View </button></td>
+            <td><button className='worker-search-result-view-button' > <Link  className='admin-search-worker-view-link' to='/admin/viewworker' state={{username : props.worker.username }} > View </Link></button></td>
         </tr>
     );
 }

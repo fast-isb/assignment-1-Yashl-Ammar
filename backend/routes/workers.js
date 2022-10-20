@@ -56,6 +56,17 @@ workerRouter.post("/search", (req, res) => {
       });
   });
 
+workerRouter.post('/getworker', (req,res) => {
+
+    Worker.find({username : req.body.username})
+    .then(worker => {
+        res.json(worker);
+    })
+    .catch((err) => {
+        res.status(400).json("Error " + err);
+    })
+})
+
 workerRouter.post("/login", (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
