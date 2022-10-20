@@ -6,9 +6,6 @@
 //const express = require('express')
 import express from 'express'; // <-- Module Style import
 import bodyParser from 'body-parser';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import {} from 'dotenv/config'
 
 // Importing user route
 import router from './routes/users.js';
@@ -20,16 +17,7 @@ import workerRouter from './routes/workers.js'
 const app = express()
 const port = 3001
 
-app.use(cors());
-app.use(bodyParser.json()).com
-
-const uri = process.env.ATLAS_URI;
-mongoose.connect(uri);
-const connection = mongoose.connection;
-connection.once('open', () => {
-  console.log("MongoDB database connection established successfully");
-})
-
+app.use(bodyParser.json())
 // Adding a Router
 app.use('/users', router);
 
@@ -51,3 +39,4 @@ app.post('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
+
