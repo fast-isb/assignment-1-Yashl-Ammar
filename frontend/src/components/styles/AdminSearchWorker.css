@@ -27,3 +27,38 @@
     transition: 0s;
     background-color: red;
 }
+
+
+.workertile-div {
+    border-radius: 50px;
+    border: 1px solid grey;
+    background-color: 	#F9F6EE;
+    width: 70%;
+    margin: auto;
+}
+
+.workertile-content {
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.worker-search-result-table {
+    width: 70%;
+    margin: auto;
+}
+
+.worker-search-result-view-button {
+    background-color: #19A463;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0px;
+    width: 100px;
+}
+
+.admin-search-worker-view-link {
+    text-decoration: none;
+    color: white;
+}

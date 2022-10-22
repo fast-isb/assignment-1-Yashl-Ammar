@@ -99,7 +99,7 @@ class WorkerSignUp extends React.Component {
       } catch (e) {
         console.log(e.response);
 
-        alert("this worker already exists");
+        alert('this worker already exists or Error has occurred');
       }
     }
   };
