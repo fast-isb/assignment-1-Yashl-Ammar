@@ -1,19 +1,21 @@
-.sidebar{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
+.Link-decoration{
+    background-color: rgb(0, 0, 0)(255, 255, 255);
+    color: white;
+    font-size: medium;
+    text-decoration: none;
 }
-/* body{
- margin: 0;
- padding: 0;
-} */
-.dashboard{
+.dashboard-wroker-profile{
     height: 100%;
     background-color: #000000;
     width: 220px;
     padding: 5px;
 }
-.dashboard-button{
+.sidebar{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+.dashboard-worker-button{
     background-color: transparent; /* Green */
     border: none;
     color: white;
@@ -25,7 +27,7 @@
     margin-top: 10px;
     margin-bottom: 50px;
 }
-.dashboard-button:hover{
+.dashboard-worker-button:hover{
     transition: 0.8s;
     background-color: rgb(147, 149, 152);
 }
