@@ -3,12 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import AdminSearchWorker from "./components/AdminSearchWorker";
 import CustomerSearch from "./components/CustomerSearch";
-
+import SignUp from "./signup"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <AdminSearchWorker/> */}
-    <CustomerSearch/>
+    {/* <CustomerSearch/> */}
+    <SignUp/>
   </React.StrictMode>
 );
 
