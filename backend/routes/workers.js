@@ -46,54 +46,72 @@ workerRouter.post("/add", (req, res) => {
 });
 
 workerRouter.post("/search", (req, res) => {
-    let name = req.body.name;
-    Worker.find({ fname: name})
-      .then((worker) => {
-        res.json(worker);
-      })
-      .catch((err) => {
-        res.status(400).json("Error " + err);
-      });
-  });
-
-workerRouter.post('/getworker', (req,res) => {
-
-    Worker.find({username : req.body.username})
-    .then(worker => {
-        res.json(worker);
+  let name = req.body.name;
+  Worker.find({ fname: name })
+    .then((worker) => {
+      res.json(worker);
     })
     .catch((err) => {
-        res.status(400).json("Error " + err);
+      res.status(400).json("Error " + err);
+    });
+});
+
+workerRouter.post("/getworker", (req, res) => {
+  Worker.find({ username: req.body.username })
+    .then((worker) => {
+      res.json(worker);
     })
-})
+    .catch((err) => {
+      res.status(400).json("Error " + err);
+    });
+});
 
-workerRouter.post('/delete',(req,res)=> {
-
-    Worker.deleteOne({username : req.body.username})
+workerRouter.post("/delete", (req, res) => {
+  Worker.deleteOne({ username: req.body.username })
     .then(() => {
-        res.json('Worker Deleted');
+      res.json("Worker Deleted");
     })
     .catch((err) => {
-        res.status(400).json("Error " + err);
-    })
-})
+      res.status(400).json("Error " + err);
+    });
+});
 
-workerRouter.post('/ban',  async (req,res)=> {
+workerRouter.post("/ban", async (req, res) => {
+  let filter = { username: req.body.username };
+  let update = { banned: req.body.banned };
 
-    let filter = {username : req.body.username};
-    let update = {banned : req.body.banned};
+  console.log(req.body);
 
-    console.log(req.body);
+  await Worker.updateOne(filter, update);
 
-    await Worker.updateOne(filter,update);
+  res.json("Ban Status Updated");
+});
+workerRouter.post("/update/profile", async (req, res) => {
+  let filter = { username: req.body.username };
+  let update = {
+    fname: req.body.fname,
+    lname: req.body.lname,
+    pNo: req.body.pNo,
+    dob: req.body.dob,
+    domain: req.body.domain,
+    service: req.body.service,
+    hNo: req.body.hNo,
+    sector: req.body.sector,
+    street: req.body.street,
+    city: req.body.city,
+  };
 
-    res.json('Ban Status Updated');
-})
+  console.log("username of worker:" + req.body.fname);
+
+  await Worker.updateOne(filter, update);
+
+  res.json("Your Information has been Updated");
+});
 
 workerRouter.post("/login", (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
-  Worker.find({ username: req.body.username })
+  Worker.find({ username: req.body.username, password: req.body.password })
     .then((worker) => {
       res.json(worker);
     })
