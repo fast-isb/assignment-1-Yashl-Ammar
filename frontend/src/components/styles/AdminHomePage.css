@@ -1,0 +1,64 @@
+
+.float-container {
+    display: flex;
+}
+
+.side-navigation {
+    background: #222222;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    width: 25%;
+    text-align: center;
+}
+
+.basic-information {
+    margin-left: 28%;
+    padding: 20px;
+    width: 72%;
+    text-align: center;
+}
+
+.circle-avatar{
+    width: 300px;
+    padding: 20px;
+}
+
+.Admin-Navigation-Button {
+    width: 100%;
+    height: 55px;
+    background-color: #19A463;
+    border: 0px;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+}
+
+.Admin-Navigation-Button:hover{
+    transition: 00.5s;
+    opacity: 0.7;
+}
+
+.Admin-Navigation-Button:active{
+    transition: 0s;
+    background-color: red;
+}
+
+.mahir-title{
+    font-size: 50px;
+    color: #19A463;
+}
+
+.mahir-hr {
+    margin-top: -5px;
+    width: 200px;
+    height: 5px;
+    background-color: #19A463;
+}
+
+.about-section {
+    margin-top: -10px;
+    text-align: left;
+    padding: 20px;
+}

@@ -1,0 +1,59 @@
+
+
+.inner-center {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.center-div{
+    width: 50%;
+    margin: 0 auto;
+    padding: 1% 7% 1% 7%;
+    background: #222222;
+    color: white;
+    border-radius: 2px;
+    text-align: left;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.signup {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.signup-textfield {
+    padding: 10px 10px 10px 10px;
+    width: 250px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+
+.submit-button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 7px 7px 7px 7px;
+    width: 270px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #19A463;
+    color: white;
+}
+
+.submit-button:hover {
+    transition: 0.5s;
+    opacity: 0.7;
+}
+.submit-button:active {
+    background-color: grey;
+}
+

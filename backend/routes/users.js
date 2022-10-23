@@ -1,23 +1,31 @@
-import express from 'express';
+import express from "express";
 
 // const express = require('express');
 const router = express.Router();
 
 const users = [
-    {
-        name: 'John Doe',
-        age: 25
-    }
-]
+  {
+    name: "John Doe",
+    age: 25,
+  },
+];
 
-router.get('/', (req, res) => {
-    res.send(users)
+router.get("/", (req, res) => {
+  res.send(users);
+});
+
+router.post("/", (req, res) => {
+  const user = req.body;
+  console.log(req.body);
+  res.send(`added into the DB`);
+});
+
+router.post("/userSignIn",(req,res)=>{
+    console.log(req.body)
 })
 
-router.post('/', (req, res) => {
-    const user = req.body;
-    console.log(req.body);
-    res.send(`added into the DB`)
+router.post("/userSignUp",(req,res)=>{
+    console.log(req.body)
 })
 
 export default router;

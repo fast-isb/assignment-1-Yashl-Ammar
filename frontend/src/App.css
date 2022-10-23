@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: beige;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Customer-SignUpButton{
+  color: black;
+}
+
+.Customer-SignUp{
+  background-color: beige;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.User-submitButton{
+  background-color: greenyellow;
+}
+
+.Admin-SignIn{
+  background-color: beige;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
 }
