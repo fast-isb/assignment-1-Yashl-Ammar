@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     height: 30px;
     border-color: black;
@@ -20,4 +20,24 @@
     height: 40px;
     object-fit: contain;
 }
-
+.NavBar-SignIn-Button{
+    margin-left: 10px;
+    font-size: 17px;
+    color: white;
+    border-radius: 15px;
+    background-color: black;
+}
+.Worker-button{
+    margin-right: 35px;
+    font-size: 15px;
+    color: white;
+    border-radius: 15px;
+    background-color: black;
+}
+.NavBar-SignUp-Button{
+    margin-left: 800px;
+    font-size: 17px;
+    color: white;
+    border-radius: 15px;
+    background-color: black;
+}

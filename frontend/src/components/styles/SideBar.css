@@ -1,0 +1,31 @@
+.sidebar{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+/* body{
+ margin: 0;
+ padding: 0;
+} */
+.dashboard{
+    height: 100%;
+    background-color: #000000;
+    width: 220px;
+    padding: 5px;
+}
+.dashboard-button{
+    background-color: transparent; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.dashboard-button:hover{
+    transition: 0.8s;
+    background-color: rgb(147, 149, 152);
+}
