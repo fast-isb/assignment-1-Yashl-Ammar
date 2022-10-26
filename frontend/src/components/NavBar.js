@@ -3,7 +3,6 @@ import "./styles/NavBar.css";
 import mahir from "./mahir.PNG";
 import Login from "./Login.js";
 import WorkerSignUp from "./WorkerSignUp.js";
-import Home from "./Home.js";
 import { useNavigate } from "react-router-dom";
 function NavBar() {
   let navigate = useNavigate();
@@ -38,16 +37,13 @@ function NavBar() {
           Sign In
         </button>
         <button
-          className="Worker-button"
+          className="Worker-signIn-button"
           onClick={() => {
             navigate("/signup");
           }}
         >
           Become a Worker
         </button>
-      </div>
-      <div>
-        <Home />
       </div>
     </div>
   );

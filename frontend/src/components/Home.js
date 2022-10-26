@@ -21,9 +21,12 @@ class Home extends React.Component {
           <div className="banner_fadebottom"></div>
         </header>
         <div className="scope">
+          <div>
+            <NavBar />
+          </div>
           <br></br>
           <h1>Scope</h1>
-          <hr style={{ width: "7%" }}></hr>
+          <hr style={{ width: "7%", marginLeft: "47%" }}></hr>
           <p>
             This multi-purpose app has been designed to offer a hassle-free
             booking of Home, Cleaning, Personal Care Services etc online.
@@ -39,13 +42,13 @@ class Home extends React.Component {
         <div className="Para">
           <br></br>
           <h1>Our Unique Selling Points Make Us the Most Reliable Choice</h1>
-          <hr style={{ width: "70%" }}></hr>
+          <hr style={{ width: "70%", marginLeft: "15%" }}></hr>
           <p>
             We understand your fears about letting a stranger come inside your
             home.
             <br></br>
-            We know that you cannot trust just any Tom, Dick, Or Harry with your
-            home possessions and your family’s safety.
+            We know that you cannot trus,t just any Tom, Dick, Or Harry with
+            your home possessions and your family’s safety.
             <br></br>
             That is why we have come up with services that cater to all your
             fears and concerns
