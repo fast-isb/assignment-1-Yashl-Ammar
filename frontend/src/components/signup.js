@@ -1,16 +1,21 @@
 import axios from "axios";
 import React from "react";
-import "./App.css";
+import "../App.css";
 
 const SignUp = () => {
-  const [name, setName] = React.useState("");
+  const [Fname, setFName] = React.useState("");
+  const [Lname, setLName] = React.useState("");
+  const [userName, setUserName] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setConfirmPassword] = React.useState("");
   const [num, setNum] = React.useState("");
   const [address, setAddress] = React.useState("");
   const [email, setEmail] = React.useState("");
+  const fullName= Fname+" "+Lname
+
   const UserSignUp = {
-    name: name,
+    name: fullName,
+    username:userName,
     email: email,
     password: password,
     phoneNum: num,
@@ -38,9 +43,23 @@ const SignUp = () => {
         <h2>Sign Up</h2>
         <input
           type="text"
-          placeholder="Enter name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          placeholder="Enter First name"
+          value={Fname}
+          onChange={(e) => setFName(e.target.value)}
+        ></input>
+        <br></br>
+        <input
+          type="text"
+          placeholder="Enter Last name"
+          value={Lname}
+          onChange={(e) => setLName(e.target.value)}
+        ></input>
+        <br></br>
+        <input
+          type="text"
+          placeholder="Enter user name"
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
         ></input>
         <br></br>
         <input
