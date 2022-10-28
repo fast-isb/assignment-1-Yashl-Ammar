@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const customerSchema = new Schema({
-    userName: { type: String, required: true, unique: true, trim: true, minlength: 3},
+    username: { type: String, required: true, unique: true, trim: true, minlength: 3},
     name:{type: String, required: true},
     email:{type:String,required:true},
     phoneNum:{type:String,required:true},

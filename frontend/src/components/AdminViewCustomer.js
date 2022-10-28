@@ -4,7 +4,7 @@ import axios from "axios";
 import NavBar from "./NavBarLogin&SignUp.js";
 import "./styles/AdminViewCustomer.css";
 
-const customerFeildViewTile = (props) => {
+const CustomerFeildViewTile = (props) => {
   return (
     <tr>
       <td>{props.field}</td>
@@ -22,25 +22,25 @@ const customerFeildViewTile = (props) => {
 const AdminViewcustomer = () => {
   let navigate = useNavigate();
   let location = useLocation();
-  let userName = { userName: location.state.userName };
+  let username = { username: location.state.username };
 
   const [customer, setcustomer] = useState({
-    userName: "",
-    name: "",
+    Address: "",
     email:"",
-    Address:"",
-    banned: "",
-    phoneNum: "",
-    password: "",
+    name:"",
+    password:"",
+    phoneNum:"",
+    username:"",
+    banned :"",
   });
 
   useEffect(() => {
     let fetchData = async () => {
       let response = await axios.post(
         "http://localhost:3001/customer/getcustomer",
-       customer
+       username
       );
-      console.log(response);
+      
       setcustomer(response.data[0]);
     };
     fetchData();
@@ -73,7 +73,7 @@ const AdminViewcustomer = () => {
       });
 
     // needs to be updated
-    navigate("/admin/search/customer");
+    navigate("/");
   };
 
   let bancustomer = () => {
@@ -97,12 +97,13 @@ const AdminViewcustomer = () => {
 
   return (
     <div>
+        
       <div>
         <NavBar />
       </div>
       <div className="adminview-customer-data-display">
         <h1 className="adminview-customer-data-display-title">
-          {customer.fname} {customer.lname}
+          {customer.name}
         </h1>
         <hr className="adminview-customer-data-display-title-hr" />
         <button
@@ -117,7 +118,7 @@ const AdminViewcustomer = () => {
           onClick={bancustomer}
         >
           {" "}
-          {checkBanned()}{" "}
+           {checkBanned()}{" "}
         </button>
 
         <div className="adminview-customer-data-display-table">
@@ -137,27 +138,17 @@ const AdminViewcustomer = () => {
               </tr>
             </thead>
             <tbody>
-            <customerFeildViewTile field="Username" value={customer.userName} />
-              <customerFeildViewTile field="Fullname" value={customer.name} />
-              <customerFeildViewTile field="Email" value={customer.email} />
-              <customerFeildViewTile field="Phone Number" value={customer.phoneNum} />
-              <customerFeildViewTile field="Address" value={customer.Address} />
-         
-                field="DOB"
-                value={customer.dob.substring(0, 10)}
-              
-              <customerFeildViewTile
+              <CustomerFeildViewTile  field="Username" value={customer.username} />
+              <CustomerFeildViewTile field="Fullname" value={customer.name} />
+              <CustomerFeildViewTile field="Email" value={customer.email} />
+              <CustomerFeildViewTile field="Phone Number" value={customer.phoneNum} />
+              <CustomerFeildViewTile
                 field="banned"
                 value={banStringConversion()}
               />
-              <customerFeildViewTile field="Domain" value={customer.domain} />
-              <customerFeildViewTile field="Service" value={customer.service} />
-              <customerFeildViewTile field="Phone Number" value={customer.pNo} />
-              <customerFeildViewTile field="House Number" value={customer.hNo} />
-              <customerFeildViewTile field="Street" value={customer.street} />
-              <customerFeildViewTile field="Sector" value={customer.sector} />
-              <customerFeildViewTile field="City" value={customer.city} />
-              <customerFeildViewTile field="Password" value={customer.password} />
+              <CustomerFeildViewTile field="Address" value={customer.Address} />
+              <CustomerFeildViewTile field="Phone Number" value={customer.phoneNum} />
+              <CustomerFeildViewTile field="Password" value={customer.password} />
             </tbody>
           </table>
         </div>

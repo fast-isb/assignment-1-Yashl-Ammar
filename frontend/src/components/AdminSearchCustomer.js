@@ -15,12 +15,12 @@ let CustomerTile = (props) => {
 
     return (
         <tr className='customertile-content'>
-            <td>{props.customer.userName}</td>
+            <td>{props.customer.username}</td>
             <td>{props.customer.name}</td>
             <td>{props.customer.email}</td>
             <td>{props.customer.Address}</td>
-            <td>{checkBanned}</td>
-            <td><button className='customer-search-result-view-button' > <Link  className='admin-search-customer-view-link' to='/admin/viewcustomer' state={{username : props.customer.userName }} > View </Link></button></td>
+            <td>{checkBanned()}</td>
+            <td><button className='customer-search-result-view-button' > <Link  className='admin-search-customer-view-link' to='/admin/viewcustomer' state={{username : props.customer.username }} > View </Link></button></td>
         </tr>
     );
 }
@@ -89,7 +89,7 @@ class AdminSearchcustomer extends React.Component {
                             <table className='customer-search-result-table'>
                                 <thead >
                                     <tr>
-                                        <th>Username</th>
+                                        <th>username</th>
                                         <th>Full Name</th>
                                         <th>Email</th>
                                         <th>Address</th>
