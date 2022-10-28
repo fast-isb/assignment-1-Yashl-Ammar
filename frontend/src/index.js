@@ -3,10 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals.js";
 import WorkerSignUp from "./components/WorkerSignUp.js";
-import Login from "./components/Login.js";
 import Home from "./components/Home.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./components/signup.js";
+import Login from "./components/Login.js";
+
+import FeedBackForm from "./components/FeedbackCustomer.js";
 // import SideBar from "./components/SideBar.js";
 import WorkersProfile from "./components/WorkersProfile.js";
 import WorkerProfileManagement from "./components/WorkerProfileManagement.js";
@@ -31,7 +33,9 @@ root.render(
         />
       </Routes>
     </Router> */}
-    <SignUp/>
+    {/* <SignUp/> */}
+    {/* <Login/> */}
+    <FeedBackForm/>
   </React.StrictMode>
 );
 
