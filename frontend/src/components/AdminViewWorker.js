@@ -22,7 +22,7 @@ const WorkerFeildViewTile = (props) => {
 const AdminViewWorker = () => {
   let navigate = useNavigate();
   let location = useLocation();
-  let username = { username: location.state.username };
+  var username = { username: location.state.username };
 
   const [worker, setWorker] = useState({
     username: "",
