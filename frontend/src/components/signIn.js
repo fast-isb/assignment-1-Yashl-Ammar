@@ -27,7 +27,9 @@ function SignIn() {
   return (
     <div className="Admin-SignIn">
       <form className="SignInForm" onSubmit={action}>
-        <h2>Sign In</h2>
+        <h2 className="Sign_In">Sign In</h2>
+        
+        <br></br>
         <input
           type="name"
           placeholder="Enter user name"

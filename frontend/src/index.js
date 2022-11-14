@@ -7,8 +7,9 @@ import Home from "./components/Home.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./components/signup.js";
 import Login from "./components/Login.js";
-
-import FeedBackForm from "./components/FeedbackCustomer.js";
+import SignIn from "./components/signIn.js"
+import FeedbackCustomer from "./components/FeedbackCustomer.js";
+import CustomerSearch from "./components/CustomerSearch.js"
 // import SideBar from "./components/SideBar.js";
 import WorkersProfile from "./components/WorkersProfile.js";
 import WorkerProfileManagement from "./components/WorkerProfileManagement.js";
@@ -33,9 +34,11 @@ root.render(
         />
       </Routes>
     </Router> */}
-    {/* <SignUp/> */}
+   
     {/* <Login/> */}
-    <FeedBackForm/>
+    {/* <FeedbackCustomer/> */}
+    {/* <SignUp/> */}
+    <CustomerSearch/>
   </React.StrictMode>
 );
 

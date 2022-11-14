@@ -1,4 +1,4 @@
-import NavBar from "./NavBarLogin&SignUp"
+import NavBar from "./NavBarLogin&SignUp.js"
 import React from "react"
 import "./styles/CustomerSearch.css"
 
@@ -6,7 +6,7 @@ function CustomerSearch(){
 const[searchText,setSearchText]=React.useState("")
 
 function action(){
-
+   
 }
 
    return(
