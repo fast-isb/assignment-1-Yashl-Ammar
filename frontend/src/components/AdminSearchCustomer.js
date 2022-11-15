@@ -20,7 +20,7 @@ let CustomerTile = (props) => {
             <td>{props.customer.email}</td>
             <td>{props.customer.Address}</td>
             <td>{checkBanned()}</td>
-            <td><button className='customer-search-result-view-button' > <Link  className='admin-search-customer-view-link' to='/admin/viewcustomer' state={{username : props.customer.username }} > View </Link></button></td>
+            <td><button className='customer-search-result-view-button' test-id="View" > <Link  className='admin-search-customer-view-link' to='/admin/viewcustomer' state={{username : props.customer.username }} > View </Link></button></td>
         </tr>
     );
 }
@@ -52,7 +52,6 @@ class AdminSearchcustomer extends React.Component {
 
         console.log(response.data)
     }
-
     displaycustomerList = () => {
 
         if(this.state.customerList.length === 0){
@@ -71,7 +70,6 @@ class AdminSearchcustomer extends React.Component {
 
         return results;
     }
-
     render() { 
         return (
             <div>
@@ -79,8 +77,8 @@ class AdminSearchcustomer extends React.Component {
                 <div className='search-customer-container-div'>
                     <h1>Search customer</h1>
                     <form onSubmit={this.onSubmit}>
-                        <input className='customer-search-bar' type='text' required placeholder='Enter customer Name' value={this.state.searchText} onChange={this.onChangeSearch} />
-                        <input className='search-submit-button' type='submit' value='Search' />
+                        <input className='customer-search-bar' data-testid = "searchField" type='text' required placeholder='Enter customer Name' value={this.state.searchText} onChange={this.onChangeSearch} />
+                        <input className='search-submit-button' data-testid ="searchButton" type='submit' value='Search' />
                     </form>
                     
                     <div className='customer-search-results-div'>
