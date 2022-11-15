@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-//import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import NavBar from "./NavBarLogin&SignUp.js";
 import axios from "axios";
 import "./styles/WorkerProfileManagement.css";
 import WorkersProfileSideBar from "./WorkersProfileSideBar.js";
 function WorkerProfileManagement() {
   // let location = useLocation();
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
   // let username = { username: location.state.username };
   let updatefirstName = (e) => {
     setWorker({
