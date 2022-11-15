@@ -245,7 +245,7 @@ class WorkerSignUp extends React.Component {
                   value={this.state.confirmPassword}
                   onChange={this.updateConfirmPassword}
                 />
-                <input className="submit-button " type="submit"  id="signupbutton" />
+                <input className="submit-button " type="submit"  data-testid="signupbutton" />
               </div>
             </div>
           </form>

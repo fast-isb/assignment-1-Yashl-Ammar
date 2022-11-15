@@ -61,17 +61,7 @@ test("renders Worker Sign up button test", () => {
         <WorkerSignUp />
       </MemoryRouter>
     );
-    const screenElement = screen.queryByTestId("signupbutton");
-    waitFor(() => expect(getByTestId(screenElement)).toBeInTheDocument());
-});
-
-test("renders Worker Sign up input field test", () => {
-    render(
-      <MemoryRouter>
-        <WorkerSignUp />
-      </MemoryRouter>
-    );
-    const screenElement = screen.queryByTestId("fnField");
+    const screenElement = screen.getByTestId("signupbutton");
     waitFor(() => expect(getByTestId(screenElement)).toBeInTheDocument());
 });
 
