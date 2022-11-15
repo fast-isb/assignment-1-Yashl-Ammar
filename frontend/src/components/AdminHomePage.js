@@ -13,13 +13,13 @@ class AdminHomePage extends React.Component {
                         <div className='side-navigation'>
                             <img className='circle-avatar' src={circle} alt='Avatar' />
                             <hr></hr>
-                            <button className='Admin-Navigation-Button'>Search Worker</button>
+                            <button data-testid="AdminSearchWorkerButton" className='Admin-Navigation-Button'>Search Worker</button>
                             <hr></hr>
-                            <button className='Admin-Navigation-Button'>Approve Worker</button>
+                            <button data-testid="AdminApproveWorkerButton" className='Admin-Navigation-Button'>Approve Worker</button>
                             <hr></hr>
-                            <button className='Admin-Navigation-Button'>Search Customer</button>
+                            <button data-testid="AdminSearchCustomerButton" className='Admin-Navigation-Button'>Search Customer</button>
                             <hr></hr>
-                            <button className='Admin-Navigation-Button'>Manage Services</button>
+                            <button data-testid="AdminManageServiceButton" className='Admin-Navigation-Button'>Manage Services</button>
                             <hr></hr>
                         </div>
                         <div className='basic-information'>

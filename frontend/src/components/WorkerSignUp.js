@@ -117,6 +117,7 @@ class WorkerSignUp extends React.Component {
               <div>
                 <h3>First Name:</h3>
                 <input
+                data-testid="fnField"
                   className="signup-textfield"
                   type="text"
                   placeholder="First Name"
@@ -126,6 +127,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Last Names:</h3>
                 <input
+                data-testid="lnField"
                   className="signup-textfield"
                   type="text"
                   placeholder="Last Name"
@@ -135,6 +137,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Date of Birth:</h3>
                 <input
+                data-testid="dobField"
                   className="signup-textfield"
                   type="date"
                   placeholder="Date"
@@ -144,6 +147,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Phone Number:</h3>
                 <input
+                data-testid="pnField"
                   className="signup-textfield"
                   type="number"
                   placeholder="Phone Number"
@@ -153,6 +157,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Choose your domain:</h3>
                 <input
+                data-testid="domainField"
                   className="signup-textfield"
                   type="text"
                   placeholder="Domain"
@@ -162,6 +167,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Services you will provide:</h3>
                 <input
+                data-testid="servicesField"
                   className="signup-textfield"
                   type="text"
                   placeholder="Services"
@@ -171,6 +177,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>House no./Unit:</h3>
                 <input
+                data-testid="HField"
                   className="signup-textfield"
                   type="text"
                   placeholder="House no./Unit"
@@ -180,6 +187,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Street:</h3>
                 <input
+                data-testid="streetField"
                   className="signup-textfield"
                   type="text"
                   placeholder="Street"
@@ -189,6 +197,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Sector/Area:</h3>
                 <input
+                data-testid="sectorField"
                   className="signup-textfield"
                   type="text"
                   placeholder="Sector/Area"
@@ -198,6 +207,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>City:</h3>
                 <input
+                data-testid="cityField"
                   className="signup-textfield"
                   type="text"
                   placeholder="City"
@@ -207,6 +217,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Username:</h3>
                 <input
+                data-testid="usernameField"
                   className="signup-textfield"
                   type="text"
                   placeholder="Username"
@@ -216,6 +227,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Password:</h3>
                 <input
+                data-testid="passField"
                   className="signup-textfield"
                   type="password"
                   placeholder="Password"
@@ -225,6 +237,7 @@ class WorkerSignUp extends React.Component {
                 />
                 <h3>Confirm Password:</h3>
                 <input
+                data-testid="confirmpassField"
                   className="signup-textfield"
                   type="password"
                   placeholder="Confirm Password"
@@ -232,7 +245,7 @@ class WorkerSignUp extends React.Component {
                   value={this.state.confirmPassword}
                   onChange={this.updateConfirmPassword}
                 />
-                <input className="submit-button " type="submit" />
+                <input className="submit-button " type="submit"  id="signupbutton" />
               </div>
             </div>
           </form>

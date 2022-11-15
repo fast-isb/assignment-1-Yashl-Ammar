@@ -77,8 +77,8 @@ class AdminSearchWorker extends React.Component {
                 <div className='search-worker-container-div'>
                     <h1>Search Worker</h1>
                     <form onSubmit={this.onSubmit}>
-                        <input className='worker-search-bar' type='text' required placeholder='Enter Worker Name' value={this.state.searchText} onChange={this.onChangeSearch} />
-                        <input className='search-submit-button' type='submit' value='Search' />
+                        <input data-testid="searchField" className='worker-search-bar' type='text' required placeholder='Enter Worker Name' value={this.state.searchText} onChange={this.onChangeSearch} />
+                        <input data-testid="searchButton" className='search-submit-button' type='submit' value='Search' />
                     </form>
                     
                     <div className='worker-search-results-div'>
