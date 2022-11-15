@@ -46,7 +46,7 @@ function Login() {
     }
   };
   return (
-    <div>
+    <div id="comp">
       <div className="background">
         <NavBar />
         <div className="Login-form">
@@ -60,6 +60,7 @@ function Login() {
               required
               value={worker.username}
               onChange={updateusername}
+              data-testid="UsernameInput"
             ></input>
             <h3>Password</h3>
             <input
@@ -68,6 +69,7 @@ function Login() {
               required
               value={worker.password}
               onChange={updatepassword}
+              data-testid="passwordfield"
             ></input>
 
             <br></br>
@@ -79,7 +81,11 @@ function Login() {
               Forget Password
             </a>
             <div className="veritcal-center">
-              <button className="Sign-In-Button" onClick={onLogin}>
+              <button
+                className="Sign-In-Button"
+                data-testid="loginButton"
+                onClick={onLogin}
+              >
                 Sign In
               </button>
             </div>

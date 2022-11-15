@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+//import { useLocation, useNavigate } from "react-router-dom";
 import NavBar from "./NavBarLogin&SignUp.js";
 import axios from "axios";
 import "./styles/WorkerProfileManagement.css";
 import WorkersProfileSideBar from "./WorkersProfileSideBar.js";
 function WorkerProfileManagement() {
-  let location = useLocation();
-  let navigate = useNavigate();
-  let username = { username: location.state.username };
+  // let location = useLocation();
+  // let navigate = useNavigate();
+  // let username = { username: location.state.username };
   let updatefirstName = (e) => {
     setWorker({
       username: worker.username,
@@ -193,17 +193,17 @@ function WorkerProfileManagement() {
     city: "-",
     password: "-",
   });
-  useEffect(() => {
-    let fetchData = async () => {
-      let response = await axios.post(
-        "http://localhost:3001/worker/getworker",
-        username
-      );
-      console.log(response);
-      setWorker(response.data[0]);
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   let fetchData = async () => {
+  //     let response = await axios.post(
+  //       "http://localhost:3001/worker/getworker",
+  //       username
+  //     );
+  //     console.log(response);
+  //     setWorker(response.data[0]);
+  //   };
+  //   fetchData();
+  // }, []);
   let update = () => {
     axios
       .post("http://localhost:3001/worker/update/profile", worker)
@@ -240,6 +240,7 @@ function WorkerProfileManagement() {
                 type="text"
                 placeholder="First Name"
                 value={worker.fname}
+                data-testid="firstname"
                 onChange={updatefirstName}
               ></input>
               <h6 style={{ textAlign: "left" }}>Last Name</h6>
@@ -247,6 +248,7 @@ function WorkerProfileManagement() {
                 type="text"
                 placeholder="Last Name"
                 value={worker.lname}
+                data-testid="lastname"
                 onChange={updatelastName}
               ></input>
               <h6 style={{ textAlign: "left" }}> Phone</h6>
@@ -254,6 +256,7 @@ function WorkerProfileManagement() {
                 type="Number"
                 placeholder="+92"
                 value={worker.pNo}
+                data-testid="phonenumber"
                 onChange={updatephoneNumber}
               ></input>
               <h6 style={{ textAlign: "left" }}> Date</h6>
@@ -261,6 +264,7 @@ function WorkerProfileManagement() {
                 type="Date"
                 placeholder="DD/MM/YYYY"
                 value={worker.dob}
+                data-testid="date"
                 onChange={updateDate}
               ></input>
               <h6 style={{ textAlign: "left" }}>Domain</h6>
@@ -268,6 +272,7 @@ function WorkerProfileManagement() {
                 type="text"
                 placeholder="Enter Your Workin Domain"
                 value={worker.domain}
+                data-testid="domain"
                 onChange={updatedomain}
               ></input>
               <h6 style={{ textAlign: "left" }}>Services</h6>
@@ -275,6 +280,7 @@ function WorkerProfileManagement() {
                 type="text"
                 placeholder="Your Service"
                 value={worker.service}
+                data-testid="services"
                 onChange={updateservices}
               ></input>
               <h6 style={{ textAlign: "left" }}>House No</h6>
@@ -282,6 +288,7 @@ function WorkerProfileManagement() {
                 type="text"
                 placeholder="#"
                 value={worker.hNo}
+                data-testid="houseno"
                 onChange={updateHouseNo}
               ></input>
               <h6 style={{ textAlign: "left" }}>Street</h6>
@@ -289,6 +296,7 @@ function WorkerProfileManagement() {
                 type="text"
                 placeholder="#"
                 value={worker.street}
+                data-testid="street"
                 onChange={updateStreet}
               ></input>
               <h6 style={{ textAlign: "left" }}>Sector</h6>
@@ -296,6 +304,7 @@ function WorkerProfileManagement() {
                 type="text"
                 placeholder="Your Sector"
                 value={worker.sector}
+                data-testid="sector"
                 onChange={updateSector}
               />
               <h6 style={{ textAlign: "left" }}>City</h6>
@@ -303,13 +312,22 @@ function WorkerProfileManagement() {
                 type="text"
                 placeholder="Your City"
                 value={worker.city}
+                data-testid="city"
                 onChange={updateCity}
               ></input>
             </form>
-            <button onClick={update} className="update-profile-button">
+            <button
+              onClick={update}
+              className="update-profile-button"
+              data-testid="updatebutton"
+            >
               Update
             </button>
-            <button className="Delete-profile-button" onClick={deleteAccount}>
+            <button
+              className="Delete-profile-button"
+              onClick={deleteAccount}
+              data-testid="deletebutton"
+            >
               Delete Account
             </button>
             <p class="message">

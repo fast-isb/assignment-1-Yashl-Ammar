@@ -1,14 +1,14 @@
 import "./styles/WorkersProfile.css";
 import axios from "axios";
 import NavBar from "./NavBarLogin&SignUp.js";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+//import { Link, useLocation, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import WorkersProfileSideBar from "./WorkersProfileSideBar.js";
 const WorkersProfile = () => {
-  let location = useLocation();
-  let username = { username: location.state.username };
+  //let location = useLocation();
+  //let username = { username: location.state.username };
   const [worker, setWorker] = useState({
     username: "-",
     fname: "-",
@@ -24,17 +24,17 @@ const WorkersProfile = () => {
     city: "-",
     password: "-",
   });
-  useEffect(() => {
-    let fetchData = async () => {
-      let response = await axios.post(
-        "http://localhost:3001/worker/getworker",
-        username
-      );
-      console.log(response);
-      setWorker(response.data[0]);
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   let fetchData = async () => {
+  //     let response = await axios.post(
+  //       "http://localhost:3001/worker/getworker",
+  //       username
+  //     );
+  //     console.log(response);
+  //     setWorker(response.data[0]);
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <div>
