@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Col, FloatingLabel, Form, Row } from "react-bootstrap";
-import * as bd from "react-basic-design";
+//import * as bd from "react-basic-design";
+const bd = require('react-basic-design');
 import "../components/styles/style.scss";
 
 export default function FeedbackCustomer() {
@@ -18,22 +19,28 @@ export default function FeedbackCustomer() {
   }
 
   return (
-    <>
+    <div data-testid="Feedback-Customer">
       <bd.Paper className="p-3 my-3 mx-auto" style={{ maxWidth: 600 }}>
         <Form autoComplete="off" className="">
           <div className="text-primary text-center mb-4">
-            <bd.icons.Email style={{ fontSize: 50 }} />
+            
             <h3 className="mt-3">Customer FEEDBACK FORM</h3>
             
           </div>
 
-          <FloatingLabel label="Email address" className="dense has-icon mb-3">
+          <FloatingLabel label="Email" className="dense has-icon mb-3">
             <Form.Control
               name="email"
               type="email"
               placeholder="yourName@gmail.com"
+            />  
+          </FloatingLabel>
+          <FloatingLabel label="Practice label" className="Practice-label">
+            <Form.Control
+            name="Paani"
+            type="number"
+            placeholder="gmail.com"
             />
-            <bd.icons.PersonOutline />
           </FloatingLabel>
 
           <Row>
@@ -53,6 +60,7 @@ export default function FeedbackCustomer() {
                 <Form.Select name="type" placeholder="Type">
                   <option>Suggestion</option>
                   <option>Bug Report</option>
+                  <option></option>
                   <option>Others</option>
                 </Form.Select>
               </FloatingLabel>
@@ -78,6 +86,6 @@ export default function FeedbackCustomer() {
           </bd.Button>
         </Form>
       </bd.Paper>
-    </>
+    </div>
   );
 }

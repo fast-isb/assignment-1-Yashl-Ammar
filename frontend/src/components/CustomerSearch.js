@@ -10,7 +10,7 @@ function action(){
 }
 
    return(
-    <div>
+    <div data-testid="Customer-Search">
         <NavBar/>
         <div className="CustomerSearch">
             <form className="Customer-search-form" onSubmit={action}>

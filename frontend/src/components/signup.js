@@ -38,7 +38,7 @@ const SignUp = () => {
   }
 
   return (
-    <div className="Customer-SignUp">
+    <div className="Customer-SignUp" data-testid="signup-customer">
       <form className="Customer-SignUp" onSubmit={getDetails}>
         <h2>Sign Up</h2>
         <input

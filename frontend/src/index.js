@@ -10,6 +10,7 @@ import Login from "./components/Login.js";
 import SignIn from "./components/signIn.js"
 import FeedbackCustomer from "./components/FeedbackCustomer.js";
 import CustomerSearch from "./components/CustomerSearch.js"
+import Rating from "./components/RateWorker.js";
 // import SideBar from "./components/SideBar.js";
 import WorkersProfile from "./components/WorkersProfile.js";
 import WorkerProfileManagement from "./components/WorkerProfileManagement.js";
@@ -36,9 +37,9 @@ root.render(
     </Router> */}
    
     {/* <Login/> */}
-    {/* <FeedbackCustomer/> */}
+    <FeedbackCustomer/>
     {/* <SignUp/> */}
-    <CustomerSearch/>
+    {/* <Rating/> */}
   </React.StrictMode>
 );
 
