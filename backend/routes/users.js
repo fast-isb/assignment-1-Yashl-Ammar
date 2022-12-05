@@ -1,6 +1,7 @@
 import express from "express";
 
 import Customer from "../models/customer.model.js";
+import feedback from "../models/feedback.model.js";
 // const express = require('express');
 const router = express.Router();
 
@@ -23,8 +24,34 @@ router.post("/", (req, res) => {
 
 router.post("/userSignIn",(req,res)=>{
     console.log(req.body)
+    let userName=req.body.userName
+    let password=req.body.password
+    Customer.find({userName:userName, password:password})
+    .then((customer) => {
+      res.json(customer);
+    })
+    .catch((err) => {
+      res.status(400).json("Error " + err);
+    });
     
   
+})
+router.post("/userfeedback",(req,res)=>{
+  console.log(req.body)
+  let email,serviceused,message,username
+  username=req.body.username 
+  email=req.body.email
+  serviceused=req.body.service
+  message=req.body.message
+
+  const newFeedBack= new feedback({
+    username,email,serviceused,message
+  })
+  newFeedBack.save().then(()=>{
+    res.json("Feedback has been added")
+  }).catch(()=>{
+    res.status(400).json("Error " + err);
+  })
 })
 
 router.post("/userSignUp",(req,res)=>{

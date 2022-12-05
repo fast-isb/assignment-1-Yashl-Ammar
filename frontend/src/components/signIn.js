@@ -6,22 +6,26 @@ function SignIn() {
   const [user, setuser] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  function action(e) {
+  let action=async(e)=> {
     e.preventDefault();
-
     const SignInCustomer = {
       userName: user,
       password: password,
     };
     console.log(SignInCustomer);
-    axios.post("http://localhost:3001/users/userSignIn", SignInCustomer).then(
-      (res) => {
-        console.log(res);
-      },
-      (error) => {
-        console.log(error);
+    let responce=await axios.post("http://localhost:3001/users/userSignIn", SignInCustomer);
+    console.log(responce);
+    if (responce.data[0].userName === SignInCustomer.userName) {
+      if (responce.data[0].password === SignInCustomer.password) {
+          alert("Logged in")
       }
-    );
+      else{
+        alert("Wrong data")
+      }
+    }
+    else{
+        alert("wrong")
+      }
   }
 
   return (
@@ -44,7 +48,7 @@ function SignIn() {
           onChange={(e) => setPassword(e.target.value)}
         ></input>
         <br></br>
-        <input type="submit" className="User-submitButton"></input>
+        <input type="submit" className="User-submitButton" ></input>
       </form>
     </div>
   );

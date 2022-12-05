@@ -13,6 +13,7 @@ import CustomerSearch from "./components/CustomerSearch.js"
 import Rating from "./components/RateWorker.js";
 // import SideBar from "./components/SideBar.js";
 import WorkersProfile from "./components/WorkersProfile.js";
+import CustomerSearchWorker from "./components/CustomerSearch.js";
 import WorkerProfileManagement from "./components/WorkerProfileManagement.js";
 import NavBar from "./components/NavBar.js";
 import AdminSearchWorker from "./components/AdminSearchWorker.js";
@@ -37,7 +38,8 @@ root.render(
     </Router> */}
    
     {/* <Login/> */}
-    <FeedbackCustomer/>
+    {/* <FeedbackCustomer/> */}
+    <CustomerSearchWorker/>
     {/* <SignUp/> */}
     {/* <Rating/> */}
   </React.StrictMode>

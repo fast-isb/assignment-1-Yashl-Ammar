@@ -119,4 +119,9 @@ workerRouter.post("/login", (req, res) => {
       res.status(400).json("Error " + err);
     });
 });
+
+workerRouter.post("/serviceSearch",(req , res) => {
+  console.log(req.body)
+
+})
 export default workerRouter;
