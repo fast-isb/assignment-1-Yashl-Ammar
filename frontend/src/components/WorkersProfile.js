@@ -1,7 +1,7 @@
 import "./styles/WorkersProfile.css";
 import axios from "axios";
 import NavBar from "./NavBarLogin&SignUp.js";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";

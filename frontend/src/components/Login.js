@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./styles/Login.css";
 import NavBar from "./NavBarLogin&SignUp.js";
-import mahir from "./mahir.PNG";
+
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
-import { browserHistory } from "react-router";
+import { useNavigate } from "react-router-dom";
 function Login() {
   let navigate = useNavigate();
   let [worker, setworker] = useState({
