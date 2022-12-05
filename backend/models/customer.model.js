@@ -16,7 +16,7 @@ const customerSchema=new Schema({
     email:{
         type:String,
         required:true,
-        unique:true,
+        unique:false,
     },
     password:{
         type:String,
@@ -40,6 +40,6 @@ const customerSchema=new Schema({
     timestamps:true
 })
 
-const Customer=mongoose.model("Customer",customerSchema)
+const Customer=mongoose.model("Customer Table",customerSchema)
 
 export default Customer

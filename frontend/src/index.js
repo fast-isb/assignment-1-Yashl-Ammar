@@ -21,27 +21,20 @@ import AdminViewWorker from "./components/AdminViewWorker.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <Router>
+    <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/worker/profile" element={<WorkersProfile />} />
-        <Route path="/admin/search/worker" element={<AdminSearchWorker />} />
-        <Route path="/signin" element={<Login />} />
-        <Route path="/signup" element={<WorkerSignUp />} />
-        <Route path="/customer/signup" element={<SignUp />} />
-        <Route path="/admin/viewworker" element={<AdminViewWorker />} />
+        <Route path="/" element={<SignUp />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/user/searchwork" element={<CustomerSearch />} />
+        <Route path="/user/userFeedback" element={<FeedbackCustomer />} />
         <Route
           path="/worker/profile/management"
           element={<WorkerProfileManagement />}
         />
       </Routes>
-    </Router> */}
+    </Router>
    
-    {/* <Login/> */}
-    {/* <FeedbackCustomer/> */}
-    <CustomerSearchWorker/>
-    {/* <SignUp/> */}
-    {/* <Rating/> */}
+   
   </React.StrictMode>
 );
 

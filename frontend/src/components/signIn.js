@@ -1,11 +1,12 @@
 import "../App.css"
 import React from "react";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 function SignIn() {
   const [user, setuser] = React.useState("");
   const [password, setPassword] = React.useState("");
-
+  let navigate = useNavigate();
+  
   let action=async(e)=> {
     e.preventDefault();
     const SignInCustomer = {
@@ -18,6 +19,7 @@ function SignIn() {
     if (responce.data[0].userName === SignInCustomer.userName) {
       if (responce.data[0].password === SignInCustomer.password) {
           alert("Logged in")
+          navigate("/user/searchwork");
       }
       else{
         alert("Wrong data")

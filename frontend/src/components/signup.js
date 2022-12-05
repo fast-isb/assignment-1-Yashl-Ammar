@@ -1,8 +1,9 @@
 import axios from "axios";
 import React from "react";
 import "../App.css";
-
+import { useNavigate } from "react-router-dom";
 const SignUp = () => {
+  let navigate = useNavigate();
   const [Fname, setFName] = React.useState("");
   const [Lname, setLName] = React.useState("");
   const [userName, setUserName] = React.useState("");
@@ -22,13 +23,15 @@ const SignUp = () => {
     address: address,
   };
 
-  function getDetails() {
+  function getDetails(e) {
+    e.preventDefault()
     if (password !== confirmPassword) {
       alert("Passwords don't match");
     } else {
       axios.post("http://localhost:3001/users/userSignUp", UserSignUp).then(
         (res) => {
           console.log(res);
+          navigate("/login");
         },
         (error) => {
           console.log(error);

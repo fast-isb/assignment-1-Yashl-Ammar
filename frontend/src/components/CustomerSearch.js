@@ -3,7 +3,8 @@ import NavBar from './NavBarLogin&SignUp.js';
 import './styles/AdminSearchWorker.css';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+ import FeedbackCustomer from './FeedbackCustomer.js';
 let WorkerTile = (props) => {
 
     let checkBanned = () => {
@@ -28,6 +29,7 @@ let WorkerTile = (props) => {
 
 
 class CustomerSearchWorker extends React.Component {
+    
     state = {
         searchText : "" ,
         workerList : [],
@@ -74,6 +76,9 @@ class CustomerSearchWorker extends React.Component {
         return (
             <div>
                 <NavBar />
+                <button className="NavBar-Feedback-Button"
+                onClick={<FeedbackCustomer/>}
+                >FeedBack</button>
                 <div className='search-worker-container-div'>
                     <h1>Search Worker</h1>
                     <form onSubmit={this.onSubmit}>
