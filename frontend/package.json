@@ -17,7 +17,6 @@
     "react-bootstrap-star-rating": "^3.5.5-alpha.0.3",
     "react-dom": "^18.2.0",
     "react-dropdown": "^1.11.0",
-    "react-icons": "^4.6.0",
     "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
@@ -31,6 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:3080",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -48,7 +48,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-    
   }
-  
 }
