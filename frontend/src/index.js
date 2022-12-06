@@ -13,18 +13,22 @@ import WorkerProfileManagement from "./components/WorkerProfileManagement.js";
 import NavBar from "./components/NavBar.js";
 import AdminSearchWorker from "./components/AdminSearchWorker.js";
 import AdminViewWorker from "./components/AdminViewWorker.js";
+import AdminSearchcustomer from "./components/AdminSearchCustomer.js";
+import AdminViewCustomer from "./components/AdminViewCustomer.js";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<AdminSearchcustomer/>} />
         <Route path="/worker/profile" element={<WorkersProfile />} />
-        <Route path="/admin/search/worker" element={<AdminSearchWorker />} />
+ 
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<WorkerSignUp />} />
         <Route path="/customer/signup" element={<CustomerSignUp />} />
         <Route path="/admin/viewworker" element={<AdminViewWorker />} />
+        <Route path="/admin/viewcustomer" element={<AdminViewCustomer />} />
         <Route
           path="/worker/profile/management"
           element={<WorkerProfileManagement />}

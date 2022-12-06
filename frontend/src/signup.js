@@ -10,6 +10,7 @@ const SignUp = () => {
   const [address, setAddress] = React.useState("");
   const [email, setEmail] = React.useState("");
   const UserSignUp = {
+ 
     name: name,
     email: email,
     password: password,
