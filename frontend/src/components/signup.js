@@ -31,7 +31,7 @@ const SignUp = () => {
       axios.post("http://localhost:3001/users/userSignUp", UserSignUp).then(
         (res) => {
           console.log(res);
-          navigate("/login");
+          navigate("/");
         },
         (error) => {
           console.log(error);

@@ -38,7 +38,7 @@ root.render(
         <Route path="/customersearch" element={<CustomerSearchWorker/>}/>
         <Route path="/customerFeedback" element={<FeedbackCustomer/>}/>
         {/* <Route path="/customersignup" element={<SignUp/>}/> */}
-        {/* <Route path="/customer/signup" element={<CustomerSignUp />} /> */}
+        <Route path="/customer/signup" element={<SignUp />} />
         <Route path="/admin/viewworker" element={<AdminViewWorker />} />
         <Route path="/admin/viewcustomer" element={<AdminViewCustomer />} />
         <Route
