@@ -9,9 +9,8 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import {} from "dotenv/config";
-
+import customerrouter from "./routes/customers.js";
 // Importing user route
-import router from "./routes/users.js";
 import workerRouter from "./routes/workers.js";
 // const router = require('router')
 
@@ -31,10 +30,9 @@ connection.once("open", () => {
 });
 
 // Adding a Router
-app.use("/users", router);
 
 app.use("/worker", workerRouter);
-
+app.use('/customer',customerrouter);
 app.get("/", (req, res) => {
   res.send("Hello Universe!");
 });

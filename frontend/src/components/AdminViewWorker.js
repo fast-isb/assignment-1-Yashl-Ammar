@@ -79,7 +79,7 @@ const AdminViewWorker = () => {
       });
 
     // needs to be updated
-    navigate("/admin/search/worker");
+    navigate("/adminsearchworker");
   };
 
   let banWorker = () => {
@@ -98,7 +98,7 @@ const AdminViewWorker = () => {
       });
 
     // needs to be updated
-    navigate("/");
+    navigate("/adminsearchworker");
   };
 
   return (
@@ -143,7 +143,7 @@ const AdminViewWorker = () => {
               </tr>
             </thead>
             <tbody>
-              <WorkerFeildViewTile field="Username" value={worker.username} />
+              <WorkerFeildViewTile field="username" value={worker.username} />
               <WorkerFeildViewTile field="First Name" value={worker.fname} />
               <WorkerFeildViewTile field="Last Name" value={worker.lname} />
               <WorkerFeildViewTile
