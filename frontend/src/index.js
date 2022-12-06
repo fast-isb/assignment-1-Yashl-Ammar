@@ -11,21 +11,16 @@ import CustomerSignUp from "./signup.js";
 import WorkersProfile from "./components/WorkersProfile.js";
 import WorkerProfileManagement from "./components/WorkerProfileManagement.js";
 import NavBar from "./components/NavBar.js";
-import AdminSearchWorker from "./components/AdminSearchWorker.js";
 import AdminViewWorker from "./components/AdminViewWorker.js";
-<<<<<<< HEAD
-import SignUp from "./signup.js";
-=======
-import AdminViewCustomer from "./components/AdminViewCustomer.js";
 import AdminHomePage from "./components/AdminHomePage.js";
-import AdminSearchCustomer from "./components/AdminSearchCustomer.js";
+import AdminSearchWorker from "./components/AdminSearchWorker.js";
 import AdminSearchcustomer from "./components/AdminSearchCustomer.js";
-
->>>>>>> 7e270a6cb7d3d3c504d2d45c0d7c650008da025a
+import AdminViewCustomer from "./components/AdminViewCustomer.js"
+import SignUp from "./signup.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <Router>
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/worker/profile" element={<WorkersProfile />} />
@@ -43,8 +38,8 @@ root.render(
         />
       </Routes>
 
-    </Router> */}
-    <SignUp/>
+    </Router>
+    
     
   </React.StrictMode>
 );
