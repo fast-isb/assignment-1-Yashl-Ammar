@@ -21,14 +21,14 @@
     object-fit: contain;
 }
 .NavBar-SignIn-Button{
-    margin-left: 10px;
+    margin-left: 5px;
     font-size: 17px;
     color: white;
     border-radius: 15px;
     background-color: black;
 }
 .Worker-signIn-button{
-    margin-right: 35px;
+    margin-right: 5px;
     font-size: 16px;
     color: white;
     border-radius: 15px;

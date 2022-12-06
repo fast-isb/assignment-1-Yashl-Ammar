@@ -19,7 +19,7 @@ function SignIn() {
     if (responce.data[0].userName === SignInCustomer.userName) {
       if (responce.data[0].password === SignInCustomer.password) {
           alert("Logged in")
-          navigate("/user/searchwork");
+          navigate("/customersearch");
       }
       else{
         alert("Wrong data")

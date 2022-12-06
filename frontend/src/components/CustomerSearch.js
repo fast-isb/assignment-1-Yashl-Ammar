@@ -5,6 +5,8 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
  import FeedbackCustomer from './FeedbackCustomer.js';
+
+ 
 let WorkerTile = (props) => {
 
     let checkBanned = () => {
@@ -76,9 +78,7 @@ class CustomerSearchWorker extends React.Component {
         return (
             <div>
                 <NavBar />
-                <button className="NavBar-Feedback-Button"
-                onClick={<FeedbackCustomer/>}
-                >FeedBack</button>
+                <Link to="/customerFeedback">Feedback</Link>
                 <div className='search-worker-container-div'>
                     <h1>Search Worker</h1>
                     <form onSubmit={this.onSubmit}>

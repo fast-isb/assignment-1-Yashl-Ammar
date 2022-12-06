@@ -45,6 +45,14 @@ function NavBar() {
           Admin
         </button>
         <button
+          className="NavBar-SignIn-Button"
+          onClick={() => {
+            navigate("/customersignin");
+          }}
+        >
+          cSignin
+        </button>
+        <button
           className="Worker-signIn-button"
           onClick={() => {
             navigate("/signup");
@@ -52,6 +60,7 @@ function NavBar() {
         >
           Become a Worker
         </button>
+        
       </div>
     </div>
   );

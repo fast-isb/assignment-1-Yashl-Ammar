@@ -10,7 +10,6 @@ import Login from "./components/Login.js";
 import SignIn from "./components/signIn.js"
 import FeedbackCustomer from "./components/FeedbackCustomer.js";
 import CustomerSearch from "./components/CustomerSearch.js"
-import Rating from "./components/RateWorker.js";
 // import SideBar from "./components/SideBar.js";
 import WorkersProfile from "./components/WorkersProfile.js";
 import CustomerSearchWorker from "./components/CustomerSearch.js";
@@ -21,7 +20,8 @@ import AdminHomePage from "./components/AdminHomePage.js";
 import AdminSearchWorker from "./components/AdminSearchWorker.js";
 import AdminSearchcustomer from "./components/AdminSearchCustomer.js";
 import AdminViewCustomer from "./components/AdminViewCustomer.js"
-import SignUp from "./signup.js";
+//import CustomerSearchWorker from "./components/CustomerSearch.js";
+//import SignUp from "./components/signup.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -34,7 +34,11 @@ root.render(
         <Route path="/adminsearchcustomer" element={<AdminSearchcustomer />} />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<WorkerSignUp />} />
-        <Route path="/customer/signup" element={<CustomerSignUp />} />
+        <Route path="/customersignin" element={<SignIn/>}/>
+        <Route path="/customersearch" element={<CustomerSearchWorker/>}/>
+        <Route path="/customerFeedback" element={<FeedbackCustomer/>}/>
+        {/* <Route path="/customersignup" element={<SignUp/>}/> */}
+        {/* <Route path="/customer/signup" element={<CustomerSignUp />} /> */}
         <Route path="/admin/viewworker" element={<AdminViewWorker />} />
         <Route path="/admin/viewcustomer" element={<AdminViewCustomer />} />
         <Route

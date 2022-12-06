@@ -12,9 +12,10 @@ import {} from "dotenv/config";
 import customerrouter from "./routes/customers.js";
 // Importing user route
 import workerRouter from "./routes/workers.js";
+import router from "./routes/users.js"
 // const router = require('router')
 
-// const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser') 
 
 const app = express();
 const port = 3001;
@@ -33,6 +34,7 @@ connection.once("open", () => {
 
 app.use("/worker", workerRouter);
 app.use('/customer',customerrouter);
+app.use('/users',router)
 app.get("/", (req, res) => {
   res.send("Hello Universe!");
 });
