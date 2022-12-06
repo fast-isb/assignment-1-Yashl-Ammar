@@ -16,25 +16,36 @@ import WorkersProfile from "./components/WorkersProfile.js";
 import CustomerSearchWorker from "./components/CustomerSearch.js";
 import WorkerProfileManagement from "./components/WorkerProfileManagement.js";
 import NavBar from "./components/NavBar.js";
-import AdminSearchWorker from "./components/AdminSearchWorker.js";
 import AdminViewWorker from "./components/AdminViewWorker.js";
+import AdminHomePage from "./components/AdminHomePage.js";
+import AdminSearchWorker from "./components/AdminSearchWorker.js";
+import AdminSearchcustomer from "./components/AdminSearchCustomer.js";
+import AdminViewCustomer from "./components/AdminViewCustomer.js"
+import SignUp from "./signup.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<SignUp />} />
-        <Route path="/login" element={<SignIn />} />
-        <Route path="/user/searchwork" element={<CustomerSearch />} />
-        <Route path="/user/userFeedback" element={<FeedbackCustomer />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/worker/profile" element={<WorkersProfile />} />
+        <Route path="/adminhomepage" element={<AdminHomePage />} />
+        <Route path="/adminsearchworker" element={<AdminSearchWorker />} />
+        <Route path="/adminsearchcustomer" element={<AdminSearchcustomer />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<WorkerSignUp />} />
+        <Route path="/customer/signup" element={<CustomerSignUp />} />
+        <Route path="/admin/viewworker" element={<AdminViewWorker />} />
+        <Route path="/admin/viewcustomer" element={<AdminViewCustomer />} />
         <Route
           path="/worker/profile/management"
           element={<WorkerProfileManagement />}
         />
       </Routes>
+
     </Router>
-   
-   
+    
+    
   </React.StrictMode>
 );
 

@@ -37,6 +37,14 @@ function NavBar() {
           Sign In
         </button>
         <button
+          className="NavBar-SignIn-Button"
+          onClick={() => {
+            navigate("/adminhomepage");
+          }}
+        >
+          Admin
+        </button>
+        <button
           className="Worker-signIn-button"
           onClick={() => {
             navigate("/signup");

@@ -99,7 +99,7 @@ class WorkerSignUp extends React.Component {
       } catch (e) {
         console.log(e.response);
 
-        alert('this worker already exists or Error has occurred');
+        alert("this worker already exists or Error has occurred");
       }
     }
   };
@@ -232,7 +232,10 @@ class WorkerSignUp extends React.Component {
                   value={this.state.confirmPassword}
                   onChange={this.updateConfirmPassword}
                 />
-                <input className="submit-button " type="submit" />
+                <button className="submit-button " type="submit">
+                  Submit
+                </button>
+                {/* <input className="submit-button " type="submit"  /> */}
               </div>
             </div>
           </form>
