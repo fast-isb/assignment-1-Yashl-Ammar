@@ -79,7 +79,7 @@ const AdminViewWorker = () => {
       });
 
     // needs to be updated
-    navigate("/admin/search/worker");
+    navigate("/adminsearchworker");
   };
 
   let banWorker = () => {
@@ -98,7 +98,7 @@ const AdminViewWorker = () => {
       });
 
     // needs to be updated
-    navigate("/");
+    navigate("/adminsearchworker");
   };
 
   return (

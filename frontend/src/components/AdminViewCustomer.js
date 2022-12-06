@@ -26,21 +26,21 @@ const AdminViewcustomer = () => {
 
   const [customer, setcustomer] = useState({
     Address: "",
-    email:"",
-    name:"",
-    password:"",
-    phoneNum:"",
-    username:"",
-    banned :"",
+    email: "",
+    name: "",
+    password: "",
+    phoneNum: "",
+    username: "",
+    banned: "",
   });
 
   useEffect(() => {
     let fetchData = async () => {
       let response = await axios.post(
         "http://localhost:3001/customer/getcustomer",
-       username
+        username
       );
-      
+
       setcustomer(response.data[0]);
     };
     fetchData();
@@ -73,7 +73,7 @@ const AdminViewcustomer = () => {
       });
 
     // needs to be updated
-    navigate("/");
+    navigate("/adminsearchcustomer");
   };
 
   let bancustomer = () => {
@@ -92,12 +92,11 @@ const AdminViewcustomer = () => {
       });
 
     // needs to be updated
-    navigate("/");
+    navigate("/adminsearchcustomer");
   };
 
   return (
     <div>
-        
       <div>
         <NavBar />
       </div>
@@ -118,7 +117,7 @@ const AdminViewcustomer = () => {
           onClick={bancustomer}
         >
           {" "}
-           {checkBanned()}{" "}
+          {checkBanned()}{" "}
         </button>
 
         <div className="adminview-customer-data-display-table">
@@ -138,17 +137,29 @@ const AdminViewcustomer = () => {
               </tr>
             </thead>
             <tbody>
-              <CustomerFeildViewTile  field="Username" value={customer.username} />
+              <CustomerFeildViewTile
+                field="Username"
+                value={customer.username}
+              />
               <CustomerFeildViewTile field="Fullname" value={customer.name} />
               <CustomerFeildViewTile field="Email" value={customer.email} />
-              <CustomerFeildViewTile field="Phone Number" value={customer.phoneNum} />
+              <CustomerFeildViewTile
+                field="Phone Number"
+                value={customer.phoneNum}
+              />
               <CustomerFeildViewTile
                 field="banned"
                 value={banStringConversion()}
               />
               <CustomerFeildViewTile field="Address" value={customer.Address} />
-              <CustomerFeildViewTile field="Phone Number" value={customer.phoneNum} />
-              <CustomerFeildViewTile field="Password" value={customer.password} />
+              <CustomerFeildViewTile
+                field="Phone Number"
+                value={customer.phoneNum}
+              />
+              <CustomerFeildViewTile
+                field="Password"
+                value={customer.password}
+              />
             </tbody>
           </table>
         </div>
