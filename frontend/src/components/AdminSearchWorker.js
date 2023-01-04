@@ -4,6 +4,7 @@ import './styles/AdminSearchWorker.css';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
+//worker tile
 let WorkerTile = (props) => {
 
     let checkBanned = () => {
